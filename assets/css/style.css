@@ -488,12 +488,7 @@ body {
   height: 300px;
   margin-left: 30px;
 }
-.suggestion-right-part {
-  width: 25%;
-  margin: 0 30px;
-  height: 300px;
-  border-top: 1px solid var(--dark);
-}
+
 .left-part-header {
   display: flex;
   justify-content: space-between;
@@ -621,4 +616,31 @@ body {
   font-size: 14px;
   font-weight: 400;
   opacity: 0.6;
+}
+
+/* Article suggestion area styles */
+.suggestion-right-part {
+  width: 25%;
+  margin: 0 30px;
+  height: 300px;
+  border-top: 1px solid var(--dark);
+}
+.suggestion-right-part .header h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.suggestion-right-part a {
+  border-top: 1px solid rgba(85, 85, 85, 0.315);
+  width: 100%;
+  display: inline-block;
+  text-decoration: none;
+  padding: 18px 0;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 16px;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+.suggestion-right-part a:hover {
+  opacity: 0.7;
 }
