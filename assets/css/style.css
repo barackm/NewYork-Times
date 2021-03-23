@@ -13,6 +13,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial;
+  overflow-x: hidden;
 }
 #navbar-main-container {
   width: 100%;
@@ -225,10 +226,10 @@ body {
 .article-body-container {
   flex: 1;
   margin-left: 15%;
-  padding-left: 15%;
+  padding-left: 13%;
 }
 #article-right-side-area {
-  width: 20%;
+  width: 25%;
 }
 .author-info-area {
   padding-bottom: 40px;
@@ -247,6 +248,10 @@ body {
 .article-body-container .body {
   display: flex;
   flex-direction: column;
+}
+.article-body-container .body h4 {
+  font-weight: bold;
+  font-size: 18px;
 }
 .article-body-container .body .signup-details {
   display: flex;
@@ -287,8 +292,180 @@ body {
 }
 .subscription-details {
   text-align: center;
+  padding: 30px 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  flex-direction: column;
 }
 .subscription-details a {
-  color: var(--primary-color);
+  color: rgb(50, 104, 145);
   text-decoration: none;
+  font-weight: bold;
+  line-height: 1;
+  font-size: 14px;
+}
+.subscription-details p {
+  line-height: 1;
+  margin-bottom: 1px;
+  font-size: 16px !important;
+  font-weight: bold;
+}
+.subscription-details::before {
+  content: "";
+  position: absolute;
+  width: 13%;
+  border-top: 1px solid #467fa8a9;
+  top: 30px;
+}
+.subscription-details::after {
+  content: "";
+  position: absolute;
+  width: 13%;
+  border-top: 1px solid #567b95b4;
+  bottom: 10px;
+}
+.article-theory-area {
+  width: 155%;
+  margin-left: -28%;
+}
+.article-theory-area .header h3 {
+  font-weight: bold;
+  line-height: 1;
+  font-size: 18px;
+}
+.article-theory-area .header p {
+  font-size: 14px;
+}
+.theory-image-wrapper {
+  width: 100%;
+  margin-top: 40px;
+  position: relative;
+}
+.theory-image-wrapper img {
+  width: 100%;
+}
+.theory-up-grid {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.theory-up-grid .theory-item {
+  padding-right: 5px;
+}
+.theory-up-grid .theory-item p {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.822);
+}
+.theory-up-grid .theory-item p strong {
+  font-size: 12px;
+  margin-right: 5px;
+}
+.theory-up-grid.down {
+  top: 390px;
+}
+.theory-author {
+  font-size: 16px;
+  margin-top: 50px;
+  position: relative;
+}
+.theory-author::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-top: 1px solid var(--primary-color);
+  top: -20px;
+  width: 7%;
+}
+.article-body-second-part {
+}
+.article-body-second-part p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.ambeded-video-container {
+  width: 100%;
+  margin: 50px 0;
+  margin-bottom: 0;
+}
+.ambeded-video-container iframe {
+  width: 100%;
+}
+.video-info p {
+  line-height: 1;
+  margin-top: 7px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #666;
+}
+.video-info {
+  margin-bottom: 50px;
+}
+
+/* Add comment area styles  */
+.read-comment-area {
+  margin-top: 30px;
+}
+.read-comment-upper-side p {
+  font-size: 13px;
+}
+.read-comment-upper-side p a {
+  /* text-decoration: none; */
+  color: #000;
+}
+.read-comment-btn-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.read-comment-btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 0;
+  border: 1px solid rgb(50, 104, 145);
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: var(--transition);
+}
+.read-comment-btn:hover {
+  background-color: #3a5c74;
+}
+.links-wrapper ul {
+  display: flex;
+}
+.links-wrapper ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+.links-wrapper ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: var(--dark);
+  border: 1px solid transparent;
+  background-color: rgb(236, 231, 231);
+  transition: var(--transition);
+}
+.links-wrapper ul li a:hover {
+  background-color: transparent;
+  border: 1px solid #666;
+}
+.links-wrapper ul li a i {
+  font-size: 14px;
 }
