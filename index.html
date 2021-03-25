@@ -912,7 +912,14 @@
             <div class="icon-container">
               <i class="fas fa-user"></i>
             </div>
-            <input type="text" required name="" id="" placeholder="Name" maxlength="20" />
+            <input
+              type="text"
+              required
+              name="name"
+              id="name"
+              placeholder="Name"
+              maxlength="20"
+            />
           </div>
         </div>
 
@@ -922,24 +929,40 @@
             <div class="icon-container">
               <i class="fas fa-envelope"></i>
             </div>
-            <input type="text" required name="" id="" placeholder="Email" maxlength="20" />
+            <input
+              type="text"
+              required
+              name="email"
+              id="email"
+              placeholder="Email"
+              maxlength="20"
+            />
           </div>
         </div>
-        
+
         <div class="form-control">
           <label class="label-input">Comment</label>
           <div class="input-wrapper">
             <div class="icon-container">
               <i class="fas fa-comment-alt"></i>
             </div>
-            <textarea name="" required id="" cols="30" rows="10" maxlength="250" placeholder="Type your comment here…"></textarea> 
+            <textarea
+              name="comment"
+              required
+              id="comment"
+              cols="30"
+              rows="10"
+              maxlength="250"
+              placeholder="Type your comment here…"
+            ></textarea>
           </div>
         </div>
         <div class="form-control">
-          <label class="label-input">What is your overall opinion about this article
+          <label class="label-input"
+            >What is your overall opinion about this article
           </label>
           <div class="input-options">
-            <select name="" id="">
+            <select name="opinion" id="opinion-select">
               <option value="positive">Positive</option>
               <option value="negative">Negative</option>
               <option value="neutral">Neutral</option>
@@ -947,18 +970,17 @@
           </div>
         </div>
         <div class="form-control checkbox">
-          <input type="checkbox" name="" id="">
-          <label class="label-input">What is your overall opinion about this article
+          <input type="checkbox" name="opinion" id="opinion" />
+          <label class="label-input"
+            >What is your overall opinion about this article
           </label>
         </div>
         <div class="submit-btn-comment">
-          <button type="submit" class="submit-comment">
-            Submit
-          </button>
-        </div>
+          <button type="submit" class="submit-comment">Submit</button>
         </div>
       </form>
     </div>
+
     <!-- <div class="add-comment-overlay"></div> -->
     <footer id="footer-main-container">
       <div class="footer-header">
