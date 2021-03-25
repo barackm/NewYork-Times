@@ -891,6 +891,97 @@
         </div>
       </section>
     </main>
+    <div class="add-comment-area">
+      <div class="comment-modal-header">
+        <div class="header">
+          <h3 class="title">Comments <span>500</span></h3>
+          <div class="close-btn">
+            <i class="fas fa-times close"></i>
+          </div>
+        </div>
+        <p class="subtitle">
+          The comments section is closed. To submit a letter to the editor for
+          publication, write to letters@nytimes.com.
+        </p>
+      </div>
+      <form id="comment-form">
+        <div class="form-overlay"></div>
+        <div class="form-control">
+          <label class="label-input">Name</label>
+          <div class="input-wrapper">
+            <div class="icon-container">
+              <i class="fas fa-user"></i>
+            </div>
+            <input
+              type="text"
+              required
+              name="name"
+              id="name"
+              placeholder="Name"
+              maxlength="20"
+            />
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label class="label-input">Email</label>
+          <div class="input-wrapper">
+            <div class="icon-container">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <input
+              type="text"
+              required
+              name="email"
+              id="email"
+              placeholder="Email"
+              maxlength="20"
+            />
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label class="label-input">Comment</label>
+          <div class="input-wrapper">
+            <div class="icon-container">
+              <i class="fas fa-comment-alt"></i>
+            </div>
+            <textarea
+              name="comment"
+              required
+              id="comment"
+              cols="30"
+              rows="10"
+              maxlength="250"
+              placeholder="Type your comment here…"
+            ></textarea>
+          </div>
+        </div>
+        <div class="form-control">
+          <label class="label-input"
+            >What is your overall opinion about this article
+          </label>
+          <div class="input-options">
+            <select name="opinion" id="opinion-select">
+              <option value="positive">Positive</option>
+              <option value="negative">Negative</option>
+              <option value="neutral">Neutral</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-control checkbox">
+          <input type="checkbox" name="opinion" id="opinion" />
+          <label class="label-input"
+            >What is your overall opinion about this article
+          </label>
+        </div>
+        <div class="submit-btn-comment">
+          <button type="submit" class="submit-comment">Submit</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="add-comment-overlay"></div> -->
     <footer id="footer-main-container">
       <div class="footer-header">
         <div class="footer-header-line"></div>
@@ -1053,5 +1144,6 @@
         </p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -19,6 +19,21 @@ body {
     sans-serif;
   overflow-x: hidden;
 }
+
+input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", "times new roman",
+    sans-serif;
+}
 /* stylelint-enable */
 
 /* Navigation bar styles  */
@@ -1073,4 +1088,202 @@ body {
   margin: 0 20px;
   text-align: center;
   padding: 5px 0;
+}
+
+/* Comment style ares  */
+.add-comment-area {
+  position: fixed;
+  z-index: 9999999;
+  width: 500px;
+  height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.603);
+  right: -100vw;
+  top: 0;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.4s ease-in;
+  overflow-y: scroll;
+}
+
+.form-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.add-comment-area.open {
+  right: 0;
+  transition: all 0.4s ease-in;
+}
+
+.add-comment-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  background-color: rgba(0, 0, 0, 0.582);
+  display: none;
+  padding: 20px;
+}
+
+.add-comment-overlay.visible {
+  display: block;
+}
+
+.comment-modal-header {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.comment-modal-header .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.comment-modal-header .header .title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 34px;
+  color: var(--dark);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.comment-modal-header .title span {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29px;
+  color: rgb(51, 51, 51);
+}
+
+.comment-modal-header .subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgb(51, 51, 51);
+}
+
+.close-btn {
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn .close {
+  font-size: 18px;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-top: 1px solid #567b9556;
+  margin: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.input-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(85, 85, 85, 0.308);
+  display: flex;
+  padding: 12px 5px;
+  margin-top: 10px;
+  transition: var(--transition);
+}
+
+.input-wrapper:focus-within {
+  border-color: #567b95;
+  box-shadow: 0 0 15px rgba(81, 139, 187, 0.151);
+}
+
+.icon-container {
+  width: 30px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-input {
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+.input-options {
+  display: flex;
+  width: 100%;
+}
+
+.input-options select {
+  flex: 1;
+  padding: 12px 5px;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 8px;
+  transition: var(--transition);
+  border: 1px solid rgba(85, 85, 85, 0.308);
+}
+
+.input-options select:focus {
+  border-color: #567b95;
+  box-shadow: 0 0 15px rgba(81, 139, 187, 0.151);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.checkbox input {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.submit-btn-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.submit-btn-comment button {
+  background-color: #407ba5;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 26px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.submit-btn-comment button:hover {
+  background-color: #3a5c74;
 }
