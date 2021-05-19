@@ -9,6 +9,7 @@
 - HTML
 - CSS
 
+
 ## Live Demo
 
 [Live Demo Link](https://barackm.github.io/NewYork-Times/)
